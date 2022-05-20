@@ -3,6 +3,22 @@ package math.problems;
 public class PrimeNumber {
 
 	public static void main(String[] args) {
+
+
+		for(int i= 2; i<= 500; i++) {
+			boolean isprime=true;
+
+			for(int j=2; j<i; j++) {
+				if(i%j ==0) {
+					isprime=false;
+					break;
+				}
+			}
+			if(isprime) {
+				System.out.println(i);
+			}
+		}
+
 		/*
 		 * Find list of Prime numbers from number 2 to 1 million.
 		 * Try the best solution as possible.Which will take less CPU life cycle.
