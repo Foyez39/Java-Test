@@ -1,14 +1,17 @@
 package string.problems;
 
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 
 public class DetermineLargestWord {
     public static void main(String[] args) {
-       /*
+      /*
 Implement to Find the length and longest word in the given sentence below.
 Should return "10 biological".
 */
+        /*
         String s="Human brain is a biological learning machine";
         Map<Integer, String> wordNLength = findTheLargestWord(s);
 //implement
@@ -20,6 +23,7 @@ Should return "10 biological".
 
             }
             System.out.println("Length and longest word is: " + longestWord.length() + " " + longestWord);
+
         }
     }
 
@@ -31,5 +35,12 @@ Should return "10 biological".
 //implement
 
         return map;
+
+         */
+        String s="Human brain is a biological learning machine";
+
+        String longestWord = Arrays.stream(s.split(" ")).max(Comparator.comparingInt(String::length)).orElse(null).toString();
+        System.out.println(longestWord.length() +" "+ longestWord);
+
     }
 }
