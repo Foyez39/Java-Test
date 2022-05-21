@@ -5,7 +5,7 @@ public class PrimeNumber {
 	public static void main(String[] args) {
 
 
-		for(int i= 2; i<= 500; i++) {
+		for(int i= 2; i<= 1000; i++) {
 			boolean isprime=true;
 
 			for(int j=2; j<i; j++) {
@@ -15,7 +15,7 @@ public class PrimeNumber {
 				}
 			}
 			if(isprime) {
-				System.out.println(i);
+				System.out.print(" "+i);
 			}
 		}
 
